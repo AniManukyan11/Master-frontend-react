@@ -1,0 +1,20 @@
+.login{
+    margin-left: 30%;
+  }
+.inputBox{
+    padding: 7px ;
+    display: block;
+    border: 1px solid  #be7af9;
+    width: 300px;
+    margin: 20px;
+  
+  }
+  .appButton{
+    margin: 20px;
+    width: 150px;
+    padding: 10px;
+    background-color:  #be7af9;
+    border: solid 1px;
+    cursor: pointer;
+  }
+  

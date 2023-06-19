@@ -1,0 +1,29 @@
+.navbar-nav{
+    position: relative!important;
+    display: flex;
+    align-items: center;
+}
+.number{
+    position: absolute;
+    top: -3px;
+    right: -18px;
+    color: rgb(68, 8, 96);
+    background-color: rgb(208, 177, 219);
+    padding: 4px 6px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+}
+.footer{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(1, 1, 1, 0.727);
+    padding: 20px;
+}
+.footerText{
+    color: white;
+font-size: 12px;
+}
