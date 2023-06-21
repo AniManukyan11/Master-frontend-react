@@ -8,7 +8,7 @@ function Login() {
     const navigate = useNavigate();
    
     const handleLogin = async () => {
-        console.log(12354)
+       
         let data = await fetch('http://localhost:3001/users/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
@@ -18,11 +18,13 @@ function Login() {
             },
         });
         data = await data.json();
+        
         console.log(data)
         if (data.message == 'Logged in!') {
             localStorage.setItem('token', data.token);
-            if (data.role==='1' ){
-             navigate('/admin/dashboard')   
+            // localStorage.setItem('userId', data.userId);
+            if (data.role=== 1 ){
+             navigate('/admin')   
             } else{
                 navigate('/')
             }
@@ -40,6 +42,7 @@ function Login() {
             <input className="inputBox" type='password' placeholder='Entre Password'
                 onChange={(e) => setPassword(e.target.value)} value={password} />
             <button onClick={handleLogin} className='appButton' type='button'>Login</button>
+            {/* <p>already have an account? <Link to='/register'>Register</Link></p> */}
         </div>
     )
 }

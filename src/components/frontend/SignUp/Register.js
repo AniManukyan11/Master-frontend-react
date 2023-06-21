@@ -29,6 +29,8 @@ function Register() {
     if (!result.error){
   localStorage.setItem("token", (result.token))
     navigate('/')
+     }else{
+      alert('Account with this email already exists')
     }
   }
 

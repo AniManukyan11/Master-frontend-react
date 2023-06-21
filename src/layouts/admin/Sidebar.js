@@ -1,7 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+// const navigate = useNavigate();
+// const logout = () => {
+//   localStorage.clear();
+//   navigate('/register')
+// }
 
 const Sidebar = () => {
+    const navigate = useNavigate();
+const logout = () => {
+  localStorage.clear();
+  navigate('/register')
+}
     return (
         <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div className="sb-sidenav-menu">
@@ -76,6 +86,7 @@ const Sidebar = () => {
                                 <nav className="sb-sidenav-menu-nested nav">
                                     <Link className="nav-link" to="/login">Login</Link>
                                     <Link className="nav-link" to="/register">Register</Link>
+                                    <Link className="nav-link " onClick={logout} to="/register">Logout </Link>
 
                                 </nav>
                             </div>
